@@ -25,18 +25,22 @@ class IntroPage extends StatelessWidget {
               child: const Text(
                 'Designed to inspire. Built to perform. Powered by Apple.',
                 textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 15,
+                  letterSpacing: 1.2
+                ),
               ),
             ),
 
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: GestureDetector(
-
-                onTap: (){
+                onTap: () {
                   // navigation
-
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
                 },
 
                 child: Container(
@@ -46,16 +50,23 @@ class IntroPage extends StatelessWidget {
 
                   decoration: BoxDecoration(
                     color: Colors.grey[900],
-                    borderRadius: BorderRadius.circular(10.5)
+                    borderRadius: BorderRadius.circular(10.5),
                   ),
 
-                  child: const Text('Shop Now', style: TextStyle(
-                    color: Colors.white
-                  ),),
+                  child: const Text(
+                    'Shop Now',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.1,
 
+                      // insert font family here.
+
+                    ),
+                  ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
