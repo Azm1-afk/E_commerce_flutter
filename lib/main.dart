@@ -1,7 +1,7 @@
-import 'package:e_commerce_app/pages/filler_page.dart';
+import 'package:e_commerce_app/pages/wishlist_page.dart';
 import 'package:e_commerce_app/pages/intro_page.dart';
 import 'package:flutter/material.dart';
-import 'pages/settings_page.dart';
+import 'pages/landing_page.dart';
 
 
 
