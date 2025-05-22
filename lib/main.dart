@@ -1,5 +1,8 @@
+import 'package:e_commerce_app/pages/filler_page.dart';
 import 'package:e_commerce_app/pages/intro_page.dart';
 import 'package:flutter/material.dart';
+import 'pages/settings_page.dart';
+
 
 
 void main() {

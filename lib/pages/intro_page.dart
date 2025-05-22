@@ -1,9 +1,14 @@
 import 'package:e_commerce_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
-class IntroPage extends StatelessWidget {
+class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
 
+  @override
+  State<IntroPage> createState() => _IntroPageState();
+}
+
+class _IntroPageState extends State<IntroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +30,7 @@ class IntroPage extends StatelessWidget {
               child: const Text(
                 'Designed to inspire. Built to perform. Powered by Apple.',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 15,
-                  letterSpacing: 1.2
-                ),
+                style: TextStyle(fontSize: 15, letterSpacing: 1.2),
               ),
             ),
 
@@ -61,7 +63,6 @@ class IntroPage extends StatelessWidget {
                       letterSpacing: 1.1,
 
                       // insert font family here.
-
                     ),
                   ),
                 ),
