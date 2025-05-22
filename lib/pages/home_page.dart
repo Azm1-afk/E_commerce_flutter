@@ -24,6 +24,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.transparent),
+
       body: _pages[_selectedIndex],
 
       bottomNavigationBar: BottomNavigationBar(
@@ -38,6 +40,18 @@ class _HomePageState extends State<HomePage> {
             label: 'Settings',
           ),
         ],
+      ),
+
+      drawer: Drawer(
+        child: Column(children: [SizedBox(height: 45), Icon(Icons.apple, size: 50,),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20),
+            child: Divider(
+              height: 20
+            ),
+          )
+        ]),
       ),
     );
   }

@@ -36,33 +36,33 @@ class _IntroPageState extends State<IntroPage> {
 
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: GestureDetector(
+              child: InkWell(
                 onTap: () {
-                  // navigation
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
-
-                child: Container(
-                  alignment: Alignment.center,
-                  width: double.infinity,
-                  height: 50,
-
+                borderRadius: BorderRadius.circular(
+                  10.5,
+                ), // for ripple clipping
+                child: Ink(
                   decoration: BoxDecoration(
                     color: Colors.grey[900],
                     borderRadius: BorderRadius.circular(10.5),
                   ),
-
-                  child: const Text(
-                    'Shop Now',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.1,
-
-                      // insert font family here.
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: double.infinity,
+                    height: 50,
+                    child: const Text(
+                      'Shop Now',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.1,
+                        fontFamily: 'Poppins', // add your font here
+                      ),
                     ),
                   ),
                 ),
