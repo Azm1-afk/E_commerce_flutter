@@ -1,0 +1,64 @@
+import 'package:e_commerce_app/pages/home_page.dart';
+import 'package:flutter/material.dart';
+
+class IntroPage extends StatelessWidget {
+  const IntroPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueGrey[100],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('lib/images/apple.png', height: 75),
+            const SizedBox(height: 65),
+
+            const Text(
+              'Think Different',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: const Text(
+                'Designed to inspire. Built to perform. Powered by Apple.',
+                textAlign: TextAlign.center,
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: GestureDetector(
+
+                onTap: (){
+                  // navigation
+
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+
+                },
+
+                child: Container(
+                  alignment: Alignment.center,
+                  width: double.infinity,
+                  height: 50,
+
+                  decoration: BoxDecoration(
+                    color: Colors.grey[900],
+                    borderRadius: BorderRadius.circular(10.5)
+                  ),
+
+                  child: const Text('Shop Now', style: TextStyle(
+                    color: Colors.white
+                  ),),
+
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
