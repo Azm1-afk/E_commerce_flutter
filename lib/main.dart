@@ -1,8 +1,5 @@
-import 'package:e_commerce_app/pages/home_page.dart';
-import 'package:e_commerce_app/pages/wishlist_page.dart';
 import 'package:e_commerce_app/pages/intro_page.dart';
 import 'package:flutter/material.dart';
-import 'pages/landing_page.dart';
 
 
 
@@ -17,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: IntroPage(),
     );
   }
 }

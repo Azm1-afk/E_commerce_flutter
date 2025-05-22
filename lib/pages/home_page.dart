@@ -1,6 +1,5 @@
 import 'package:e_commerce_app/pages/wishlist_page.dart';
 import 'package:e_commerce_app/pages/landing_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -43,15 +42,23 @@ class _HomePageState extends State<HomePage> {
       ),
 
       drawer: Drawer(
-        child: Column(children: [SizedBox(height: 45), Icon(Icons.apple, size: 50,),
+        child: Column(
+          children: [
+            SizedBox(height: 45),
+            Icon(Icons.apple, size: 50),
 
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20),
-            child: Divider(
-              height: 20
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20),
+              child: Divider(height: 20),
             ),
-          )
-        ]),
+
+            ListView(
+              padding: EdgeInsets.zero,
+              children: [],
+            )
+
+          ],
+        ),
       ),
     );
   }
