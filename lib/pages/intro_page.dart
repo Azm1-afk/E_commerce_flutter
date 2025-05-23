@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/pages/home_page.dart';
+import 'package:e_commerce_app/pages/landing_page.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatefulWidget {

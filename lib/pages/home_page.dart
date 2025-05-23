@@ -1,5 +1,7 @@
+import 'package:e_commerce_app/pages/cart_page.dart';
 import 'package:e_commerce_app/pages/wishlist_page.dart';
 import 'package:e_commerce_app/pages/landing_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,45 +20,56 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  final List _pages = const [LandingPage(), WishlistPage()];
+  final List _pages = const [LandingPage(), WishlistPage(), CartPage()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.transparent),
+      appBar: AppBar(backgroundColor: CupertinoColors.systemGrey3),
 
       body: _pages[_selectedIndex],
 
       bottomNavigationBar: BottomNavigationBar(
+
+        backgroundColor: CupertinoColors.systemGrey3,
+
         currentIndex: _selectedIndex,
         onTap: _onTapChange,
 
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.home),
+              label: 'Home'
+          ),
 
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(CupertinoIcons.gift),
+            label: 'Wishlist',
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.cart),
+            label: 'Cart',
           ),
         ],
       ),
 
       drawer: Drawer(
-        child: Column(
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
-            SizedBox(height: 45),
-            Icon(Icons.apple, size: 50),
-
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20),
-              child: Divider(height: 20),
+            DrawerHeader(
+              decoration: BoxDecoration(color: CupertinoColors.systemGrey2),
+              child: Icon(Icons.apple, size: 50),
             ),
 
-            ListView(
-              padding: EdgeInsets.zero,
-              children: [],
-            )
+            SizedBox.square(dimension: 40),
 
+            ListTile(
+              // THIS IS BASICALLY THE MAIN THING
+              leading: Icon(CupertinoIcons.settings_solid),
+              title: Text('SETTINGS', style: TextStyle(letterSpacing: 1.5)),
+            ),
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {
@@ -11,16 +12,27 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'This page will be the default page after user clicks on "Shop Now"',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+      backgroundColor: CupertinoColors.systemGrey3,
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 20, left: 35, right: 35, bottom: 35),
+            child: TextField(
+              decoration: InputDecoration(
+                prefixIconColor: Colors.black,
+                prefixIcon: Icon(CupertinoIcons.search),
+                hintText: 'Search',
+                filled: true,
+                fillColor: CupertinoColors.white,
+                border: OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+
+              ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
