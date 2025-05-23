@@ -16,7 +16,12 @@ class _LandingPageState extends State<LandingPage> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 35, right: 35, bottom: 35),
+            padding: const EdgeInsets.only(
+              top: 20,
+              left: 35,
+              right: 35,
+              bottom: 35,
+            ),
             child: TextField(
               decoration: InputDecoration(
                 prefixIconColor: Colors.black,
@@ -28,7 +33,6 @@ class _LandingPageState extends State<LandingPage> {
                   borderSide: BorderSide.none,
                   borderRadius: BorderRadius.circular(10),
                 ),
-
               ),
             ),
           ),

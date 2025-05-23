@@ -30,7 +30,6 @@ class _HomePageState extends State<HomePage> {
       body: _pages[_selectedIndex],
 
       bottomNavigationBar: BottomNavigationBar(
-
         backgroundColor: CupertinoColors.systemGrey3,
 
         currentIndex: _selectedIndex,
@@ -38,8 +37,8 @@ class _HomePageState extends State<HomePage> {
 
         items: [
           BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.home),
-              label: 'Home'
+            icon: Icon(CupertinoIcons.home),
+            label: 'Home',
           ),
 
           BottomNavigationBarItem(
