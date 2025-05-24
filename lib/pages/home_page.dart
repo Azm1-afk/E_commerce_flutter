@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/pages/cart_page.dart';
+import 'package:e_commerce_app/pages/settings_page.dart';
 import 'package:e_commerce_app/pages/wishlist_page.dart';
 import 'package:e_commerce_app/pages/landing_page.dart';
 import 'package:flutter/cupertino.dart';
@@ -62,13 +63,41 @@ class _HomePageState extends State<HomePage> {
               child: Icon(Icons.apple, size: 50),
             ),
 
-            SizedBox.square(dimension: 40),
+            SizedBox.square(dimension: 20),
 
             ListTile(
               // THIS IS BASICALLY THE MAIN THING
               leading: Icon(CupertinoIcons.settings_solid),
               title: Text('SETTINGS', style: TextStyle(letterSpacing: 1.5)),
+              onTap: () {
+                Navigator.pop(context);
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SettingsPage()),
+                );
+              },
             ),
+            ListTile(
+              // THIS IS BASICALLY THE MAIN THING
+              leading: Icon(CupertinoIcons.question),
+              title: Text('HELP/FAQ', style: TextStyle(letterSpacing: 1.5)),
+              onTap: () {},
+            ),
+            ListTile(
+              // THIS IS BASICALLY THE MAIN THING
+              leading: Icon(CupertinoIcons.phone),
+              title: Text('CONTACT US', style: TextStyle(letterSpacing: 1.5)),
+              onTap: () {},
+            ),
+            ListTile(
+              // THIS IS BASICALLY THE MAIN THING
+              leading: Icon(Icons.apple),
+              title: Text('ABOUT', style: TextStyle(letterSpacing: 1.5)),
+              onTap: () {},
+            )
+
+
           ],
         ),
       ),
