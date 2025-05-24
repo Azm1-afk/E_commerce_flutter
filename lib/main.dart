@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/pages/about_page.dart';
 import 'package:e_commerce_app/pages/intro_page.dart';
 import 'package:e_commerce_app/pages/landing_page.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: IntroPage(),
+      home: AboutPage(),
     );
   }
 }
