@@ -1,4 +1,7 @@
+import 'package:e_commerce_app/pages/about_page.dart';
 import 'package:e_commerce_app/pages/cart_page.dart';
+import 'package:e_commerce_app/pages/contact_page.dart';
+import 'package:e_commerce_app/pages/help_page.dart';
 import 'package:e_commerce_app/pages/settings_page.dart';
 import 'package:e_commerce_app/pages/wishlist_page.dart';
 import 'package:e_commerce_app/pages/landing_page.dart';
@@ -71,7 +74,6 @@ class _HomePageState extends State<HomePage> {
               title: Text('SETTINGS', style: TextStyle(letterSpacing: 1.5)),
               onTap: () {
                 Navigator.pop(context);
-
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SettingsPage()),
@@ -82,22 +84,38 @@ class _HomePageState extends State<HomePage> {
               // THIS IS BASICALLY THE MAIN THING
               leading: Icon(CupertinoIcons.question),
               title: Text('HELP/FAQ', style: TextStyle(letterSpacing: 1.5)),
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HelpPage()),
+                );
+              },
             ),
             ListTile(
               // THIS IS BASICALLY THE MAIN THING
               leading: Icon(CupertinoIcons.phone),
               title: Text('CONTACT US', style: TextStyle(letterSpacing: 1.5)),
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ContactPage()),
+                );
+              },
             ),
             ListTile(
               // THIS IS BASICALLY THE MAIN THING
               leading: Icon(Icons.apple),
               title: Text('ABOUT', style: TextStyle(letterSpacing: 1.5)),
-              onTap: () {},
-            )
-
-
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AboutPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
