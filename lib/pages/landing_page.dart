@@ -1,5 +1,8 @@
+import 'package:e_commerce_app/components/phone_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:e_commerce_app/models/phone.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -24,16 +27,45 @@ class _LandingPageState extends State<LandingPage> {
             ),
             child: TextField(
               decoration: InputDecoration(
-                prefixIconColor: Colors.black,
-                prefixIcon: Icon(CupertinoIcons.search),
+                suffixIcon: Icon(CupertinoIcons.search),
                 hintText: 'Search',
                 filled: true,
                 fillColor: CupertinoColors.white,
                 border: OutlineInputBorder(
                   borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                 ),
               ),
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.only(top: 5.0, bottom: 5),
+            child: Text(
+              "life's better with an Apple",
+              textAlign: TextAlign.center,
+              style: GoogleFonts.roboto(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
+            ),
+          ),
+
+          Expanded(
+            child: ListView.builder(
+              itemCount: 4,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+
+                Phone phone = Phone(
+                  name: 'iPhone 14',
+                  price: '599',
+                  storage: '256 GB',
+                  imagePath: 'lib/images/ip14.png'
+                );
+
+                return PhoneTile(phone: phone);
+              },
             ),
           ),
         ],
