@@ -14,6 +14,8 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
+    double deviceWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: CupertinoColors.systemGrey3,
       body: Column(
@@ -51,23 +53,36 @@ class _LandingPageState extends State<LandingPage> {
             ),
           ),
 
-          Expanded(
+          const SizedBox(height: 25),
+
+          Text('Hot Picks 🔥', style: GoogleFonts.abel(fontSize: 25)),
+
+          Container(
+            decoration: BoxDecoration(
+              // color: Colors.red
+            ),
+            height: 340,
+            width: deviceWidth,
             child: ListView.builder(
-              itemCount: 4,
+              itemCount: 3,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-
                 Phone phone = Phone(
                   name: 'iPhone 14',
                   price: '599',
                   storage: '256 GB',
-                  imagePath: 'lib/images/ip14.png'
+                  imagePath: 'lib/images/ip14.png',
                 );
-
                 return PhoneTile(phone: phone);
               },
             ),
           ),
+
+          Divider(
+            color: Colors.black,
+            thickness: 1,
+            height: 20,
+          )
         ],
       ),
     );
