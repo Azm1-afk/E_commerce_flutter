@@ -1,6 +1,7 @@
 import 'package:e_commerce_app/pages/home_page.dart';
 import 'package:e_commerce_app/pages/landing_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -31,7 +32,11 @@ class _IntroPageState extends State<IntroPage> {
               child: const Text(
                 'Designed to inspire. Built to perform. Powered by Apple.',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 15, letterSpacing: 1.2),
+                style: TextStyle(
+                  fontSize: 15,
+                  letterSpacing: 1.2,
+                  color: Colors.black54,
+                ),
               ),
             ),
 

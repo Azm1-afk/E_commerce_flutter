@@ -42,26 +42,27 @@ class PhoneTile extends StatelessWidget {
           const SizedBox(height: 15),
 
           // Price of the phone
-          Text('\$${phone.price}', style: GoogleFonts.robotoSlab(
-            fontWeight: FontWeight.bold
-          ),),
+          Text(
+            '\$${phone.price}',
+            style: GoogleFonts.robotoSlab(fontWeight: FontWeight.bold),
+          ),
 
-          const SizedBox(height: 35),
+          const SizedBox(height: 25),
 
-          FilledButton(onPressed: () {
-            // add to cart
-          },
-              style: ButtonStyle(
-                backgroundColor: WidgetStateProperty.all(Colors.black),
-                foregroundColor: WidgetStateProperty.all(Colors.white),
-                elevation: WidgetStateProperty.all(5),
-                shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5)
-                  )
-                )
+          FilledButton(
+            onPressed: () {
+              // add to cart
+            },
+            style: ButtonStyle(
+              backgroundColor: WidgetStateProperty.all(Colors.black),
+              foregroundColor: WidgetStateProperty.all(Colors.white),
+              elevation: WidgetStateProperty.all(5),
+              shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
               ),
-              child: Icon(Icons.add)),
+            ),
+            child: Icon(Icons.add),
+          ),
         ],
       ),
     );
