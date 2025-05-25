@@ -29,6 +29,10 @@ class _LandingPageState extends State<LandingPage> {
                 bottom: 35,
               ),
               child: TextField(
+                cursorColor: Colors.black,
+                cursorOpacityAnimates: true,
+                cursorHeight: 20,
+                cursorWidth: 3,
                 decoration: InputDecoration(
                   suffixIcon: Icon(CupertinoIcons.search),
                   hintText: 'Search',
